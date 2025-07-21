@@ -1,0 +1,27 @@
+<body>
+    <h1>🎮 Tebak Boleh atau Tidak Boleh</h1>
+  
+    <div id="start-container">
+      <p>Masukkan Namamu:</p>
+      <input type="text" id="player-name" placeholder="Nama kamu..." />
+      <br />
+      <button onclick="startGame()">Mulai Permainan</button>
+    </div>
+  
+    <div id="game-container" style="display: none;">
+      <p id="progress">Soal ke -</p>
+      <p id="question">Loading...</p>
+      <button onclick="answer(true)">✅ Boleh</button>
+      <button onclick="answer(false)">❌ Tidak Boleh</button>
+      <p id="feedback"></p>
+      <p id="score">Skor: 0</p>
+      <button id="restart-btn" onclick="restartGame()" style="display: none;">🔄 Mulai Ulang</button>
+    </div>
+  
+    <div id="leaderboard-container">
+      <h2>🏆 Leaderboard</h2>
+      <ol id="leaderboard-list"></ol>
+    </div>
+  
+    <script src="script.js"></script>
+  </body>  

@@ -1,0 +1,30 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 2rem;
+    background-color: #f0f9ff;
+  }
+  
+  button {
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  #feedback {
+    margin-top: 1rem;
+    font-weight: bold;
+  }  
+
+  #leaderboard-container {
+    margin-top: 2rem;
+  }
+  
+  #leaderboard-list {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+    text-align: left;
+    max-width: 300px;
+    margin: 0 auto;
+  }  
