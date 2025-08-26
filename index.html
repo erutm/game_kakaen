@@ -1,27 +1,33 @@
 <body>
-    <h1>🎮 Tebak Boleh atau Tidak Boleh</h1>
-  
-    <div id="start-container">
-      <p>Masukkan Namamu:</p>
-      <input type="text" id="player-name" placeholder="Nama kamu..." />
-      <br />
-      <button onclick="startGame()">Mulai Permainan</button>
-    </div>
-  
-    <div id="game-container" style="display: none;">
-      <p id="progress">Soal ke -</p>
-      <p id="question">Loading...</p>
-      <button onclick="answer(true)">✅ Boleh</button>
-      <button onclick="answer(false)">❌ Tidak Boleh</button>
-      <p id="feedback"></p>
-      <p id="score">Skor: 0</p>
-      <button id="restart-btn" onclick="restartGame()" style="display: none;">🔄 Mulai Ulang</button>
-    </div>
-  
-    <div id="leaderboard-container">
+  <main class="container" id="start-container">
+    <h1>🎮 Saring sebelum Sharing</h1>
+    <link rel="stylesheet" href="style.css" />
+
+    <p>👦 Masukkan Namamu:</p>
+    <input type="text" id="player-name" placeholder="Nama kamu..." />
+    <br />
+    <button onclick="startGame()">🎯 Mulai Permainan</button>
+
+    <div class="leaderboard">
       <h2>🏆 Leaderboard</h2>
-      <ol id="leaderboard-list"></ol>
+      <ul id="leaderboard-list"></ul> <!-- Tambahkan ini agar leaderboard tampil -->
+      <button onclick="resetLeaderboard()">🧹 Hapus Leaderboard</button>
     </div>
-  
-    <script src="script.js"></script>
-  </body>  
+
+    <footer>
+      <p>💬 Belajar menjaga privasi digital itu seru!</p>
+    </footer>
+  </main>
+
+  <!-- Kontainer untuk permainan, ditampilkan setelah klik tombol -->
+<section id="game-container" style="display:none;">
+  <h2 id="question"></h2>
+  <p id="progress"></p>
+  <p id="score"></p>
+  <p id="feedback"></p>
+  <button onclick="answer(true)">✅ Boleh</button>
+  <button onclick="answer(false)">❌ Tidak Boleh</button>
+</section>
+
+  <script src="script.js"></script>
+</body>
