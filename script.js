@@ -45,7 +45,6 @@ let current = 0;
 let score = 0;
 let playerName = "";
 
-// Fungsi acak soal
 function shuffleQuestions(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -62,7 +61,7 @@ function startGame() {
     return;
   }
 
-  shuffleQuestions(questions); // Acak soal setiap mulai
+  shuffleQuestions(questions);
   current = 0;
   score = 0;
 
@@ -95,7 +94,6 @@ function showQuestion() {
     saveToLeaderboard(playerName, score);
     updateLeaderboard();
 
-    // Kembali otomatis ke awal setelah 4 detik
     setTimeout(() => {
       document.getElementById("start-container").style.display = "block";
       document.getElementById("game-container").style.display = "none";
@@ -124,7 +122,6 @@ function answer(choice) {
   setTimeout(showQuestion, 2000);
 }
 
-// Simpan leaderboard
 function saveToLeaderboard(name, score) {
   let leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
   leaderboard.push({ name, score });
@@ -155,7 +152,6 @@ function resetLeaderboard() {
   }
 }
 
-// Saat halaman dibuka, tampilkan leaderboard dan reset tampilan
 window.onload = () => {
   updateLeaderboard();  
   document.getElementById("start-container").style.display = "block";
